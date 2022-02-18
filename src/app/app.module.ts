@@ -9,23 +9,30 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserComponent } from './user/user.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { DateCountPipe } from './date-count.pipe';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { UserService } from './user.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-// import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     RepositoryComponent,
     NotFoundComponent,
-    NavbarComponent,
     UserComponent,
     SearchFormComponent,
     DateCountPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
