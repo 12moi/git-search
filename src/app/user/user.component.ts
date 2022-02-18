@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
 
   constructor(public userService:UserService) {
   }
-  search(myname:any){
+  searchUser(myname:any){
     this.userService.getDetails(myname).then((success:any)=>{
       this.getUser = this.userService.gotUser;
     },
@@ -32,7 +32,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.search('');
+    this.searchUser('12moi');
   }
 
 

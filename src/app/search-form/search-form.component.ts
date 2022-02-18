@@ -8,11 +8,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class SearchFormComponent implements OnInit {
 
   public searchName:string= 'Enter Username here'
-  @Output() search = new EventEmitter<any>()
+  @Output() searchResults = new EventEmitter<any>()
   constructor() {}
 
   searchUser(){
-    this.search.emit(this.searchName);
+    this.searchResults.emit(this.searchName);
 
   }
 
