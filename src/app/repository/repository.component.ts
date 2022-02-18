@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Repo } from '../repo';
-import { UserService } from '../user.service';
+
 @Component({
   selector: 'app-repository',
   templateUrl: './repository.component.html',

@@ -10,42 +10,31 @@ import { UserService } from '../user.service';
 })
 export class UserComponent implements OnInit {
 
-  gotUser:any=User;
-  repos:any=Repo
+  getUser:any=User;
+      repos:any=Repo;
 
-constructor(public userService:UserService) {
-}
-search(myname:any){
-this.userService.getDetails(myname).then((success:any)=>{
-  this.gotUser = this.userService.gotUser;
-},
-(error:any)=>{
-  console.log('enter name')
-});
-this.userService.getReDetails(myname).then((success:any)=>{
-  this.repos = this.userService.repos;
-},
-(error:any)=>{
-  console.log('repo not found')
-}
-);
-}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  constructor(public userService:UserService) {
   }
-  // searchUser(myname:string){
-  //   this.userService.getDetails(myname).then((success:any)=>{
-  //     this.gotUser = this.userService.gotUser;
-  //   },
-  //   (error:any)=>{
-  //     console.log('enter name')
-  //   });
-  //   this.userService.getReDetails(myname).then((success:any)=>{
-  //     this.repos = this.userService.repos;
-  //   },
-  //   (error:any)=>{
-  //     console.log('repo not found')
-  //   }
-  //   );
-  // }
+  search(myname:any){
+    this.userService.getDetails(myname).then((success:any)=>{
+      this.getUser = this.userService.gotUser;
+    },
+    (error:any)=>{
+      console.log('enter name')
+    });
+    this.userService.getReDetails(myname).then((success:any)=>{
+      this.repos = this.userService.repos;
+    },
+    (error:any)=>{
+      console.log('repo not found')
+    }
+    );
+  }
+
+  ngOnInit(): void {
+    this.search('');
+  }
+
+
+
 }
