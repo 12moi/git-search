@@ -13,6 +13,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { UserService } from './user.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     UserComponent,
     SearchFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
