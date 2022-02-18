@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserComponent } from './user/user.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { DateCountPipe } from './date-count.pipe';
 
 // import { AppRoutingModule } from './app-routing.module';
 @NgModule({
@@ -17,7 +18,8 @@ import { SearchFormComponent } from './search-form/search-form.component';
     NotFoundComponent,
     NavbarComponent,
     UserComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
